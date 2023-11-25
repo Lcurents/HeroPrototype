@@ -34,9 +34,27 @@ function hitoreat() {
 }
 function hit() {
   document.getElementById('input').innerHTML = `<br><label for="hit">Damage Hit:</label>
-    <input type="number" name="hit" id="hit" /><br><br><button onclick="kenaHit">Submit</button>`;
+    <input type="number" name="hit" id="hit" /><br><br><button onclick="kenaHit()">Submit</button>`;
 }
 function isi() {
   document.getElementById('input').innerHTML = `<br><label for="makan">Isi Energy:</label>
-    <input type="number" name="makan" id="makan" /><br><br><button onclick="tambahenergy">Submit</button>`;
+    <input type="number" name="makan" id="makan" /><br><br><button onclick="tambahenergy()">Submit</button>`;
+}
+function tambahenergy() {
+  let nilai = parseInt(document.getElementById(`makan`).value);
+  dika.makan(nilai);
+  if ((Akun.nama = 'Dika')) {
+    klikdika();
+  } else {
+    klikdoni();
+  }
+}
+function kenaHit() {
+  let nilai = parseInt(document.getElementById(`hit`).value);
+  dika.hit(nilai);
+  if ((Akun.nama = 'Dika')) {
+    klikdika();
+  } else {
+    klikdoni();
+  }
 }
